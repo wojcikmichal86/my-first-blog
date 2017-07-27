@@ -3,7 +3,10 @@ h1 a {
     font-family: 'Lobster';
 }
 body {
-    padding-left: 15px;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
 }
 .page-header {
     background-color: #ff9400;
@@ -16,6 +19,15 @@ body {
     font-size: 36pt;
     text-decoration: none;
 }
+
+
+.jumbotron {
+  background-image: url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/bg.png');  
+  height: 100%;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
 
 .content {
     margin-left: 40px;
