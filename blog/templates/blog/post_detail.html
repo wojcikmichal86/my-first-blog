@@ -15,7 +15,7 @@
 	{% endif %}
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
-	<a href="{% url 'post_detail' pk-post.pk %}">Comments: {{ post.comments.count }}</a>
+	<a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a>
     </div>
 
 <hr>
