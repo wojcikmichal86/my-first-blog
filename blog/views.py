@@ -50,13 +50,13 @@ def post_draft_list(request):
 def post_publish(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.publish()
-    return redirect('blog.views.post_detail', pk=pk)
+    return redirect('post_detail', pk=pk)
 
 @login_required
 def post_remove(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
-    return redirect('blog.views.post_list')
+    return redirect('post_list')
 
 def add_comment_to_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
