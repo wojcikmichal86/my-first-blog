@@ -1,8 +1,8 @@
 from django.shortcuts import redirect
 from django.shortcuts import render
-from django.http import HttpResponse
 from django.utils import timezone
 from .models import Post, Comment
+from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm
 from django.contrib.auth.decorators import login_required
