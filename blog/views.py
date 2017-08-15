@@ -29,7 +29,7 @@ def gym_spider(gym):
         zajecia = []
         url = 'http://fitnessplatinium.pl/'+gym+'/grafik/'
         source_code = poolmanager.PoolManager()
-        plain_text = source_code.urlopen('GET', 'http://www.crummy.com/software/BeautifulSoup/')
+        plain_text = source_code.urlopen('GET', url)
         soup = BeautifulSoup(plain_text, "lxml")
         dni=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
