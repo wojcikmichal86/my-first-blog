@@ -6,8 +6,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm
 from django.contrib.auth.decorators import login_required
-from requests import requests
-
+from urllib3 import poolmanager
 from bs4 import BeautifulSoup
 
 def post_list(request):
@@ -29,8 +28,8 @@ def gym_spider(gym):
         godziny = []
         zajecia = []
         url = 'http://fitnessplatinium.pl/'+gym+'/grafik/'
-        source_code = requests.get(url)
-        plain_text = source_code.text
+        source_code = poolmanager.PoolManager()
+        plain_text = source_code.urlopen('GET', 'http://www.crummy.com/software/BeautifulSoup/')
         soup = BeautifulSoup(plain_text, "lxml")
         dni=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
