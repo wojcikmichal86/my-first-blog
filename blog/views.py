@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm
 from django.contrib.auth.decorators import login_required
-from urllib3 import poolmanager
+from urllib3 import PoolManager
 from bs4 import BeautifulSoup
 
 def post_list(request):
